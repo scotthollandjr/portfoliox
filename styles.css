@@ -1,8 +1,19 @@
 html, body {
-  font-family: Open Sans;
+  font-family: Montserrat;
   font-size: 18px;
   line-height: 28px;
   margin: 0px;
+}
+
+#stars {
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -2;
+  filter: brightness(.75);
 }
 
 h1 {
@@ -15,7 +26,7 @@ h1 {
   line-height: 200px;
 }
 
-.MainContainer {
+.container {
   perspective: 1px;
   transform-style: preserve-3d;
   height: 100vh;
@@ -23,27 +34,44 @@ h1 {
   overflow-y: scroll;
 }
 
-.ContentContainer {
+.inner-container {
   position: absolute;
   display: block;
-  background-color: white;
+  background-color: #3f2448;
+  color: #f4f3ec;
   z-index: 1;
   top: 800px;
   left: 0px;
   right: 0px;
 }
 
-.Content {
-  max-width: 750px;
+.content {
+  width: 90%;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 75px 0;
+}
+
+.panel-0 {
+  background-color: #3f2448;
+  color: #f4f3ec;
+}
+
+.panel-1 {
+  background-color: #f4f3ec;
+  color: #666;
+}
+
+.panel-2 {
+  background-color: #3f2448;
+  color: #f4f3ec;
 }
 
 p {
   margin: 75px 0;
 }
 
-.Layer0, .Layer1, .Layer2, .Layer3 {
+.trees-0, .trees-1, .trees-2, .trees-3 {
   display: flex;
   flex: 1 0 auto;
   position: absolute;
@@ -55,44 +83,55 @@ p {
   right: 0px;
 }
 
-.Layer0 {
-  background: url('./Layer0.png');
+.trees-0 {
+  background: url('./images/trees-0.png');
   background-repeat: no-repeat;
-  background-size: contain;
-  transform: translateZ(-15px) scale(16);
-  top: 0px;
+  background-size: 100%;
+  transform: translateZ(-27px) scale(28);
+  top: 200%;
 }
 
-.Layer1 {
-  background: url('./Layer1.png');
+.trees-1 {
+  background: url('./images/trees-1.png');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100%;
+  transform: translateZ(-11px) scale(12);
+  top: 100%;
+}
+
+.trees-2 {
+  background: url('./images/trees-2.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
   transform: translateZ(-9px) scale(10);
-  top: 50px;
+  top: 100%;
 }
 
-.Layer2 {
-  background: url('./Layer2.png');
+.trees-3 {
+  background: url('./images/trees-3.png');
   background-repeat: no-repeat;
-  background-size: contain;
-  transform: translateZ(-5px) scale(6);
-  top: 425px;
+  background-size: 100%;
+  transform: translateZ(-1px) scale(2);
+  top: 60%;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  font-size: 30pt;
+  font-weight: 100;
 }
 
 .name {
   position: absolute;
-  left: 320px;
+  left: 30px;
   color: white;
   font-size: 36pt;
+  z-index: -1;
+  font-weight: 100;    
   top: 125px;
-}
-
-.Layer3 {
-  background: url('./Layer3.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  transform: translateZ(-1px) scale(2);
-  top: 350px;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800');
