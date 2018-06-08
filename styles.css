@@ -37,7 +37,7 @@ h1 {
 .inner-container {
   position: absolute;
   display: block;
-  background-color: #3f2448;
+  background-color: #3f3f3f;
   color: #f4f3ec;
   z-index: 1;
   top: 800px;
@@ -63,8 +63,33 @@ h1 {
 }
 
 .panel-2 {
-  background-color: #3f2448;
+  background-color: #3f3f3f;
   color: #f4f3ec;
+}
+
+.panel-2 .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.screenshot {
+  background: black;
+  height: 260px;
+  width: 400px;
+  box-shadow: 0px 2px 15px 0px rgba(0,0,0,.5);
+}
+
+.screenshot.rocket {
+  background: url('./images/rocketstats.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.screenshot.eyecue {
+  background: url('./images/eyecuelab.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .panel-3 {
@@ -137,7 +162,7 @@ p {
 }
 
 .trees-0 {
-  background: url('./images/trees-0.jpg');
+  background: url('./images/trees-0.png');
   background-repeat: no-repeat;
   background-size: 100%;
   transform: translateZ(-27px) scale(28);
