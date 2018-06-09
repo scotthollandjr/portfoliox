@@ -26,12 +26,17 @@ h1 {
   line-height: 200px;
 }
 
+.justify {
+  text-align: justify;
+}
+
 .container {
   perspective: 1px;
   transform-style: preserve-3d;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: scroll;
+  background-color: #3f3f3f;
 }
 
 .inner-container {
@@ -145,6 +150,8 @@ h1 {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  min-height: 400px;
+  flex-wrap: wrap;
 }
 
 .screenshot {
@@ -152,18 +159,19 @@ h1 {
   height: 260px;
   width: 400px;
   box-shadow: 0px 2px 15px 0px rgba(0,0,0,.5);
+  margin-bottom: 50px;
 }
 
 .screenshot.rocket {
   background: url('./images/rocketstats.png');
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .screenshot.eyecue {
   background: url('./images/eyecuelab.png');
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .panel-3 {
@@ -173,7 +181,7 @@ h1 {
 }
 
 .panel-3 .content {
-  height: 400px;
+  height: 350px;
   transform: skewY(-3deg);
   display: flex;
   flex-direction: row;
@@ -188,9 +196,22 @@ h1 {
 }
 
 .links {
-  margin-top: 10px;
+  margin-top: 25px;
   display: flex;
   flex-direction: column;
+}
+
+.link-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.first {
+  flex: 4;
+}
+
+.second {
+  flex: 1;
 }
 
 i {
@@ -206,17 +227,6 @@ i {
   min-height: 300px;
   height: 300px;
   border-radius: 50%;
-}
-
-.panel-3::after {
-  content: '';
-  height: 90px;
-  background: #3f2448;
-  width: 100%;
-  transform: skewY(-3deg);
-  z-index: 0;
-  bottom: -60px;
-  position: fixed;
 }
 
 p {
@@ -240,7 +250,7 @@ p {
   background-repeat: no-repeat;
   background-size: 100%;
   transform: translateZ(-27px) scale(28);
-  top: 200%;
+  top: 100%;
 }
 
 .trees-1 {
@@ -248,7 +258,7 @@ p {
   background-repeat: no-repeat;
   background-size: 100%;
   transform: translateZ(-11px) scale(12);
-  top: 100%;
+  top: 50%;
 }
 
 .trees-2 {
@@ -256,15 +266,15 @@ p {
   background-repeat: no-repeat;
   background-size: 100%;
   transform: translateZ(-9px) scale(10);
-  top: 100%;
+  top: 50%;
 }
 
 .trees-3 {
   background: url('./images/trees-3.png');
   background-repeat: no-repeat;
   background-size: 100%;
-  transform: translateZ(-1px) scale(2);
-  top: 50%;
+  transform: translateZ(-2px) scale(3);
+  top: 60%;
 }
 
 .trees-3::before {
