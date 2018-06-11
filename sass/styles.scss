@@ -1,0 +1,418 @@
+// media query mixins
+@mixin tiny {
+  @media (max-width: 355px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 667px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 993px) {
+    @content;
+  }
+}
+
+@mixin full {
+  @media (min-width: 1277px) {
+    @content;
+  }
+}
+
+html, body {
+  font-family: Montserrat;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover, &:active {
+    opacity: .9;
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  font-size: 30pt;
+  line-height: 30pt;
+  font-weight: 100;
+}
+
+.justify {
+  text-align: justify;
+}
+
+// h1 {
+//   letter-spacing: -15px;
+//   font-family: Open Sans;
+//   color: white;
+//   text-align: center;
+//   font-size: 200px;
+//   font-weight: 800;
+//   line-height: 200px;
+// }
+
+.container {
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: #26262d;
+
+  .inner-container {
+    position: absolute;
+    display: block;
+    background-color: #26262d;
+    color: #f4f3ec;
+    z-index: 1;
+    top: 125%;
+    left: 0px;
+    right: 0px;
+  }
+
+  .content {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 75px 0;
+  }
+}
+
+.tree-container {
+  .name {
+    position: absolute;
+    left: 30px;
+    color: white;
+    font-size: 36pt;
+    z-index: -1;
+    font-weight: 100;
+    top: 18%;
+    left: 19%;
+  }
+
+  .trees-0, .trees-1, .trees-2, .trees-3 {
+    display: flex;
+    flex: 1 0 auto;
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    left: -5%;
+    right: 0px;
+
+    &.trees-0 {
+      background: url('../images/trees-0.png');
+      background-repeat: no-repeat;
+      background-size: 1750px;
+      transform: translateZ(-27px) scale(28);
+      top: 75%;
+    }
+
+    &.trees-1 {
+      background: url('../images/trees-1.png');
+      background-repeat: no-repeat;
+      background-size: 1750px;
+      transform: translateZ(-9px) scale(10);
+      top: -50%;
+    }
+
+    &.trees-2 {
+      background: url('../images/trees-2.png');
+      background-repeat: no-repeat;
+      background-size: 1750px;
+      transform: translateZ(-9px) scale(10);
+      top: 50%;
+    }
+
+    &.trees-3 {
+      background: url('../images/trees-3.png');
+      background-repeat: no-repeat;
+      background-size: 1750px;
+      transform: translateZ(-1px) scaleX(-1) scale(2);
+      top: 35%;
+
+      &::after {
+        content: '';
+        background: #3f2448;
+        width: 100%;
+        height: 400px;
+        bottom: -300px;
+        position: relative;
+      }
+    }
+
+    @include full {
+      background-size: 100%;
+    }
+  }
+}
+
+.panel-0 {
+  position: absolute;
+  display: block;
+  color: #f4f3ec;
+  z-index: 3;
+  top: 80%;
+  left: 0px;
+  right: 0px;
+  color: #f4f3ec;
+
+  p {
+    margin: 75px 0;
+  }
+}
+
+.panel-1 {
+  background-color: #f4f3ec;
+  color: #666;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .port-row {
+      display: flex;
+      flex-direction: row;
+      width: 75%;
+      justify-content: space-around;
+
+      .port {
+        width: 150px;
+        height: 200px;
+        filter: grayscale(50%);
+        margin: 10px 15px;
+
+        &.port-css {
+          background: url('../images/port-css.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+        }
+
+        &.port-git {
+          background: url('../images/port-git.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+        }
+
+        &.port-html {
+          background: url('../images/port-html.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+        }
+
+        &.port-js {
+          background: url('../images/port-js.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+        }
+
+        &.port-ng {
+          background: url('../images/port-ng.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+        }
+
+        &.port-node {
+          background: url('../images/port-node.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+        }
+
+        &.port-react {
+          background: url('../images/port-react.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+        }
+
+        &.port-ruby {
+          background: url('../images/port-ruby.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+        }
+
+        &.port-ts {
+          background: url('../images/port-ts.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+        }
+      }
+    }
+  }
+}
+
+.panel-2 {
+  background-color: #26262d;
+  color: #f4f3ec;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+
+    .title {
+      margin-bottom: 25px;
+    }
+
+    .screenshot-container {
+      flex-wrap: wrap;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      min-height: 400px;
+      flex-wrap: wrap;
+
+      .screenshot-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        max-width: 400px;
+        margin: 0px 10px 30px;
+
+        .screenshot {
+          background: black;
+          height: 260px;
+          width: 400px;
+          box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.5);
+          margin-bottom: 10px;
+
+          &.rocket {
+            background: url('../images/rocketstats.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+
+          &.eyecue {
+            background: url('../images/eyecuelab.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+
+          &.dashboard {
+            background: url('../images/dashboard.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: brightness(93%);
+          }
+        }
+      }
+    }
+  }
+}
+
+.chip-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+
+  .chip {
+    background: #3c3b3f;
+    margin: 5px;
+    padding: 2px 10px;
+    box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.panel-3 {
+  background-color: #f4f3ec;
+  color: #666;
+  transform: skewY(4deg);
+
+  .content {
+    height: 275px;
+    transform: skewY(-4deg);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .avatar {
+      background: url('../images/raccoon.jpg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      min-width: 250px;
+      width: 250px;
+      min-height: 250px;
+      height: 250px;
+      border-radius: 50%;
+      box-shadow: 0px 3px 20px -3px rgba(0, 0, 0, 0.5);
+    }
+
+    .bio {
+      margin-left: 70px;
+      max-width: 550px;
+      display: flex;
+      flex-direction: column;
+
+      .title {
+        color: inherit;
+        margin-bottom: 25px;
+      }
+
+      .links {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+
+        .link-row {
+          display: flex;
+          flex-direction: row;
+
+          .first {
+            flex: 4;
+          }
+
+          .second {
+            flex: 1;
+          }
+
+          i {
+            margin: 0px 5px 0px 10px;
+          }
+        }
+      }
+    }
+  }
+
+  a {
+    align-items: center;
+    display: flex;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800');

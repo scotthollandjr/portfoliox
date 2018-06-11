@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,800");
+/* line 32, ../sass/styles.scss */
+html, body {
+  font-family: Montserrat;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0px;
+}
+
+/* line 39, ../sass/styles.scss */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* line 43, ../sass/styles.scss */
+a:hover, a:active {
+  opacity: .9;
+}
+
+/* line 48, ../sass/styles.scss */
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  font-size: 30pt;
+  line-height: 30pt;
+  font-weight: 100;
+}
+
+/* line 58, ../sass/styles.scss */
+.justify {
+  text-align: justify;
+}
+
+/* line 72, ../sass/styles.scss */
+.container {
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: #26262d;
+}
+/* line 80, ../sass/styles.scss */
+.container .inner-container {
+  position: absolute;
+  display: block;
+  background-color: #26262d;
+  color: #f4f3ec;
+  z-index: 1;
+  top: 125%;
+  left: 0px;
+  right: 0px;
+}
+/* line 91, ../sass/styles.scss */
+.container .content {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 75px 0;
+}
+
+/* line 100, ../sass/styles.scss */
+.tree-container .name {
+  position: absolute;
+  left: 30px;
+  color: white;
+  font-size: 36pt;
+  z-index: -1;
+  font-weight: 100;
+  top: 18%;
+  left: 19%;
+}
+/* line 111, ../sass/styles.scss */
+.tree-container .trees-0, .tree-container .trees-1, .tree-container .trees-2, .tree-container .trees-3 {
+  display: flex;
+  flex: 1 0 auto;
+  position: absolute;
+  z-index: -1;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  left: -5%;
+  right: 0px;
+}
+/* line 122, ../sass/styles.scss */
+.tree-container .trees-0.trees-0, .tree-container .trees-1.trees-0, .tree-container .trees-2.trees-0, .tree-container .trees-3.trees-0 {
+  background: url("../images/trees-0.png");
+  background-repeat: no-repeat;
+  background-size: 1750px;
+  transform: translateZ(-27px) scale(28);
+  top: 75%;
+}
+/* line 130, ../sass/styles.scss */
+.tree-container .trees-0.trees-1, .tree-container .trees-1.trees-1, .tree-container .trees-2.trees-1, .tree-container .trees-3.trees-1 {
+  background: url("../images/trees-1.png");
+  background-repeat: no-repeat;
+  background-size: 1750px;
+  transform: translateZ(-9px) scale(10);
+  top: -50%;
+}
+/* line 138, ../sass/styles.scss */
+.tree-container .trees-0.trees-2, .tree-container .trees-1.trees-2, .tree-container .trees-2.trees-2, .tree-container .trees-3.trees-2 {
+  background: url("../images/trees-2.png");
+  background-repeat: no-repeat;
+  background-size: 1750px;
+  transform: translateZ(-9px) scale(10);
+  top: 50%;
+}
+/* line 146, ../sass/styles.scss */
+.tree-container .trees-0.trees-3, .tree-container .trees-1.trees-3, .tree-container .trees-2.trees-3, .tree-container .trees-3.trees-3 {
+  background: url("../images/trees-3.png");
+  background-repeat: no-repeat;
+  background-size: 1750px;
+  transform: translateZ(-1px) scaleX(-1) scale(2);
+  top: 35%;
+}
+/* line 153, ../sass/styles.scss */
+.tree-container .trees-0.trees-3::after, .tree-container .trees-1.trees-3::after, .tree-container .trees-2.trees-3::after, .tree-container .trees-3.trees-3::after {
+  content: '';
+  background: #3f2448;
+  width: 100%;
+  height: 400px;
+  bottom: -300px;
+  position: relative;
+}
+@media (min-width: 1277px) {
+  /* line 111, ../sass/styles.scss */
+  .tree-container .trees-0, .tree-container .trees-1, .tree-container .trees-2, .tree-container .trees-3 {
+    background-size: 100%;
+  }
+}
+
+/* line 169, ../sass/styles.scss */
+.panel-0 {
+  position: absolute;
+  display: block;
+  color: #f4f3ec;
+  z-index: 3;
+  top: 80%;
+  left: 0px;
+  right: 0px;
+  color: #f4f3ec;
+}
+/* line 179, ../sass/styles.scss */
+.panel-0 p {
+  margin: 75px 0;
+}
+
+/* line 184, ../sass/styles.scss */
+.panel-1 {
+  background-color: #f4f3ec;
+  color: #666;
+}
+/* line 188, ../sass/styles.scss */
+.panel-1 .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* line 194, ../sass/styles.scss */
+.panel-1 .content .port-row {
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+  justify-content: space-around;
+}
+/* line 200, ../sass/styles.scss */
+.panel-1 .content .port-row .port {
+  width: 150px;
+  height: 200px;
+  filter: grayscale(50%);
+  margin: 10px 15px;
+}
+/* line 206, ../sass/styles.scss */
+.panel-1 .content .port-row .port.port-css {
+  background: url("../images/port-css.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+/* line 213, ../sass/styles.scss */
+.panel-1 .content .port-row .port.port-git {
+  background: url("../images/port-git.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+/* line 220, ../sass/styles.scss */
+.panel-1 .content .port-row .port.port-html {
+  background: url("../images/port-html.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+/* line 227, ../sass/styles.scss */
+.panel-1 .content .port-row .port.port-js {
+  background: url("../images/port-js.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+/* line 234, ../sass/styles.scss */
+.panel-1 .content .port-row .port.port-ng {
+  background: url("../images/port-ng.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+/* line 241, ../sass/styles.scss */
+.panel-1 .content .port-row .port.port-node {
+  background: url("../images/port-node.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+/* line 248, ../sass/styles.scss */
+.panel-1 .content .port-row .port.port-react {
+  background: url("../images/port-react.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+/* line 255, ../sass/styles.scss */
+.panel-1 .content .port-row .port.port-ruby {
+  background: url("../images/port-ruby.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+/* line 262, ../sass/styles.scss */
+.panel-1 .content .port-row .port.port-ts {
+  background: url("../images/port-ts.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+/* line 273, ../sass/styles.scss */
+.panel-2 {
+  background-color: #26262d;
+  color: #f4f3ec;
+}
+/* line 277, ../sass/styles.scss */
+.panel-2 .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+}
+/* line 283, ../sass/styles.scss */
+.panel-2 .content .title {
+  margin-bottom: 25px;
+}
+/* line 287, ../sass/styles.scss */
+.panel-2 .content .screenshot-container {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  min-height: 400px;
+  flex-wrap: wrap;
+}
+/* line 295, ../sass/styles.scss */
+.panel-2 .content .screenshot-container .screenshot-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  max-width: 400px;
+  margin: 0px 10px 30px;
+}
+/* line 304, ../sass/styles.scss */
+.panel-2 .content .screenshot-container .screenshot-item .screenshot {
+  background: black;
+  height: 260px;
+  width: 400px;
+  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+}
+/* line 311, ../sass/styles.scss */
+.panel-2 .content .screenshot-container .screenshot-item .screenshot.rocket {
+  background: url("../images/rocketstats.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* line 317, ../sass/styles.scss */
+.panel-2 .content .screenshot-container .screenshot-item .screenshot.eyecue {
+  background: url("../images/eyecuelab.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* line 323, ../sass/styles.scss */
+.panel-2 .content .screenshot-container .screenshot-item .screenshot.dashboard {
+  background: url("../images/dashboard.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(93%);
+}
+
+/* line 335, ../sass/styles.scss */
+.chip-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+}
+/* line 344, ../sass/styles.scss */
+.chip-container .chip {
+  background: #3c3b3f;
+  margin: 5px;
+  padding: 2px 10px;
+  box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.5);
+}
+
+/* line 352, ../sass/styles.scss */
+.panel-3 {
+  background-color: #f4f3ec;
+  color: #666;
+  transform: skewY(4deg);
+}
+/* line 357, ../sass/styles.scss */
+.panel-3 .content {
+  height: 275px;
+  transform: skewY(-4deg);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+/* line 364, ../sass/styles.scss */
+.panel-3 .content .avatar {
+  background: url("../images/raccoon.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-width: 250px;
+  width: 250px;
+  min-height: 250px;
+  height: 250px;
+  border-radius: 50%;
+  box-shadow: 0px 3px 20px -3px rgba(0, 0, 0, 0.5);
+}
+/* line 376, ../sass/styles.scss */
+.panel-3 .content .bio {
+  margin-left: 70px;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+}
+/* line 382, ../sass/styles.scss */
+.panel-3 .content .bio .title {
+  color: inherit;
+  margin-bottom: 25px;
+}
+/* line 387, ../sass/styles.scss */
+.panel-3 .content .bio .links {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+/* line 392, ../sass/styles.scss */
+.panel-3 .content .bio .links .link-row {
+  display: flex;
+  flex-direction: row;
+}
+/* line 396, ../sass/styles.scss */
+.panel-3 .content .bio .links .link-row .first {
+  flex: 4;
+}
+/* line 400, ../sass/styles.scss */
+.panel-3 .content .bio .links .link-row .second {
+  flex: 1;
+}
+/* line 404, ../sass/styles.scss */
+.panel-3 .content .bio .links .link-row i {
+  margin: 0px 5px 0px 10px;
+}
+/* line 412, ../sass/styles.scss */
+.panel-3 a {
+  align-items: center;
+  display: flex;
+}
