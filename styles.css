@@ -177,13 +177,13 @@ h1 {
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-  width: 75%;
+  width: 90%;
   margin: 0 auto;
 }
 
 .chip {
   background: #3c3b3f;
-  margin: 3px 5px;
+  margin: 5px;
   padding: 2px 10px;
   box-shadow: 0px 0px 14px -4px rgba(0,0,0,.5);
 }
@@ -194,6 +194,8 @@ h1 {
   justify-content: center;
   align-items: center;
   flex: 1;
+  max-width: 400px;
+  margin: 0px 10px 20px;
 }
 
 .screenshot-container .title {
@@ -220,6 +222,13 @@ h1 {
   background-size: cover;
 }
 
+.screenshot.dashboard {
+  background: url('./images/dashboard.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(93%);
+}
+
 .panel-3 {
   background-color: #f4f3ec;
   color: #666;
@@ -235,7 +244,7 @@ h1 {
 }
 
 .panel-3 .bio {
-  margin-left: 75px;
+  margin-left: 70px;
   max-width: 550px;
   display: flex;
   flex-direction: column;
@@ -243,7 +252,12 @@ h1 {
 
 .panel-3 .title {
   color: inherit;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.panel-3 a {
+  align-items: center;
+  display: flex;
 }
 
 .links {
@@ -273,10 +287,10 @@ i {
   background: url('./images/raccoon.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
-  min-width: 300px;
-  width: 300px;
-  min-height: 300px;
-  height: 300px;
+  min-width: 275px;
+  width: 275px;
+  min-height: 275px;
+  height: 275px;
   border-radius: 50%;
   box-shadow: 0px 3px 20px -3px rgba(0,0,0,.5);
 }
@@ -343,8 +357,8 @@ p {
   background: url('./images/trees-3.png');
   background-repeat: no-repeat;
   background-size: 1750px;
-  transform: translateZ(-1px) scale(2);
-  top: 30%;
+  transform: translateZ(-1px) scaleX(-1) scale(2);
+  top: 45%;
 }
 
 @media (min-width: 1500px) {
