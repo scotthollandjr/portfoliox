@@ -261,17 +261,53 @@ a {
 }
 
 
-.modal-container {
+#modal-container {
   position: fixed;
   top: 0px;
   bottom: 0px;
   left: 0px;
   right: 0px;
-  display: flex;
+  display: none;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   z-index: 3;
+
+  &.rocket {
+    display: flex;
+
+    .overlay {
+      display: unset;
+    }
+
+    .rocket-modal {
+      display: flex;
+    }
+  }
+
+  &.eyecue {
+    display: flex;
+
+    .overlay {
+      display: unset;
+    }
+
+    .eyecue-modal {
+      display: flex;
+    }
+  }
+
+  &.powur {
+    display: flex;
+
+    .overlay {
+      display: unset;
+    }
+
+    .powur-modal {
+      display: flex;
+    }
+  }
 
   .overlay {
     background: rgba(0, 0, 0, .5);
@@ -281,6 +317,7 @@ a {
     left: 0px;
     right: 0px;      
     cursor: pointer;
+    display: none;
   }
 
   .screenshot-modal {
@@ -292,7 +329,7 @@ a {
     background: #f4f3ec;
     z-index: 5;
     padding: 20px;
-    display: flex;
+    display: none;
     flex-direction: column;
 
     .images {
@@ -319,25 +356,90 @@ a {
         flex: 4;          
 
         .image-2 {
-          background: lime;
           flex: 1;
-          background: url('../images/dashboard.png');
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: top left;
           margin: 5px;
           box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5);
         }
 
         .image-3 {
-          background: purple;
           flex: 1;
-          background: url('../images/dashboard.png');
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: top left;
           margin: 5px;
           box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+
+    &.rocket-modal {
+      .images {
+        .image-1 {
+          video {
+          }
+        }
+
+        .image-col {        
+          .image-2 {
+            background: url('../images/rocketstats.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top left;
+          }
+
+          .image-3 {
+            background: url('../images/rocketstats.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top left;
+          }
+        }
+      }
+    }
+
+    &.eyecue-modal {
+      .images {
+        .image-1 {
+          video {
+          }
+        }
+
+        .image-col {        
+          .image-2 {
+            background: url('../images/eyecuelab.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top left;
+          }
+
+          .image-3 {
+            background: url('../images/eyecuelab.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top left;
+          }
+        }
+      }
+    }
+
+    &.powur-modal {
+      .images {
+        .image-1 {
+          video {
+          }
+        }
+
+        .image-col {        
+          .image-2 {
+            background: url('../images/dashboard.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top left;
+          }
+
+          .image-3 {
+            background: url('../images/dashboard.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top left;
+          }
         }
       }
     }
