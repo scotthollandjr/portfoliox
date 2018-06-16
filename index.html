@@ -7,21 +7,18 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
   </head>
   <body>
-    <div id="modal-container" class="rocket">
-      <div class="overlay"></div>
+    <div id="modal-container">
+      <div class="overlay" onclick="closeModal()"></div>
       <div class="screenshot-modal rocket-modal">
+        <div class="close" onclick="closeModal()">x</div>
         <div class="images">
-          <div class="image-1">
-            <video autoplay loop>
-              <source src="images/eyecuelab.mp4" type="video/mp4">
-            </video>
-          </div>
+          <div class="image-1 image"></div>
           <div class="image-col">
-            <div class="image-2"></div>
-            <div class="image-3"></div>
+            <div class="image-2 image"></div>
+            <div class="image-3 image"></div>
           </div>
         </div>
         <div class="modal-content">
@@ -39,15 +36,16 @@
         </div>
       </div>
       <div class="screenshot-modal eyecue-modal">
+        <div class="close" onclick="closeModal()">x</div>
         <div class="images">
           <div class="image-1">
-            <video autoplay loop>
-              <source src="images/eyecuelab.mp4" type="video/mp4">
+            <video autoplay loop class="image">
+              <source src="images/eyecue.mp4" type="video/mp4">
             </video>
           </div>
           <div class="image-col">
-            <div class="image-2"></div>
-            <div class="image-3"></div>
+            <div class="image-2 image"></div>
+            <div class="image-3 image"></div>
           </div>
         </div>
         <div class="modal-content">
@@ -65,15 +63,16 @@
         </div>
       </div>
       <div class="screenshot-modal powur-modal">
+        <div class="close" onclick="closeModal()">x</div>
         <div class="images">
           <div class="image-1">
-            <video autoplay loop>
-              <source src="images/eyecuelab.mp4" type="video/mp4">
+            <video autoplay loop class="image">
+              <source src="images/powur.mp4" type="video/mp4">
             </video>
           </div>
           <div class="image-col">
-            <div class="image-2"></div>
-            <div class="image-3"></div>
+            <div class="image-2 image"></div>
+            <div class="image-3 image"></div>
           </div>
         </div>
         <div class="modal-content">
@@ -134,15 +133,15 @@
             <span class="title">projects</span>
             <div class="screenshot-container">
               <div class="screenshot-item">
-                <div class="screenshot rocket"></div>
+                <div class="screenshot rocket" onclick="openModal('rocket')"></div>
                 <span class="sub-title">Rocket-Stats</span>
               </div>
               <div class="screenshot-item">
-                <div class="screenshot eyecue"></div>
+                <div class="screenshot eyecue" onclick="openModal('eyecue')"></div>
                 <span class="sub-title">EyeCue Homepage</span>
               </div>
               <div class="screenshot-item">
-                <div class="screenshot dashboard"></div>
+                <div class="screenshot dashboard" onclick="openModal('powur')"></div>
                 <span class="sub-title">Powur Dashboard</span>
               </div>
             </div>

@@ -238,7 +238,7 @@ a:hover, a:active {
   background-position: center;
 }
 
-/* line 264, ../sass/styles.scss */
+/* line 263, ../sass/styles.scss */
 #modal-container {
   position: fixed;
   top: 0px;
@@ -251,43 +251,43 @@ a:hover, a:active {
   justify-content: center;
   z-index: 3;
 }
-/* line 276, ../sass/styles.scss */
+/* line 275, ../sass/styles.scss */
 #modal-container.rocket {
   display: flex;
 }
-/* line 279, ../sass/styles.scss */
+/* line 278, ../sass/styles.scss */
 #modal-container.rocket .overlay {
   display: unset;
 }
-/* line 283, ../sass/styles.scss */
+/* line 282, ../sass/styles.scss */
 #modal-container.rocket .rocket-modal {
   display: flex;
 }
-/* line 288, ../sass/styles.scss */
+/* line 287, ../sass/styles.scss */
 #modal-container.eyecue {
   display: flex;
 }
-/* line 291, ../sass/styles.scss */
+/* line 290, ../sass/styles.scss */
 #modal-container.eyecue .overlay {
   display: unset;
 }
-/* line 295, ../sass/styles.scss */
+/* line 294, ../sass/styles.scss */
 #modal-container.eyecue .eyecue-modal {
   display: flex;
 }
-/* line 300, ../sass/styles.scss */
+/* line 299, ../sass/styles.scss */
 #modal-container.powur {
   display: flex;
 }
-/* line 303, ../sass/styles.scss */
+/* line 302, ../sass/styles.scss */
 #modal-container.powur .overlay {
   display: unset;
 }
-/* line 307, ../sass/styles.scss */
+/* line 306, ../sass/styles.scss */
 #modal-container.powur .powur-modal {
   display: flex;
 }
-/* line 312, ../sass/styles.scss */
+/* line 311, ../sass/styles.scss */
 #modal-container .overlay {
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -298,7 +298,7 @@ a:hover, a:active {
   cursor: pointer;
   display: none;
 }
-/* line 323, ../sass/styles.scss */
+/* line 322, ../sass/styles.scss */
 #modal-container .screenshot-modal {
   position: relative;
   height: 90%;
@@ -307,17 +307,26 @@ a:hover, a:active {
   max-width: 750px;
   background: #f4f3ec;
   z-index: 5;
-  padding: 20px;
+  padding: 25px;
   display: none;
   flex-direction: column;
 }
-/* line 335, ../sass/styles.scss */
+/* line 334, ../sass/styles.scss */
+#modal-container .screenshot-modal .close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: #666;
+  cursor: pointer;
+  font-weight: 700;
+}
+/* line 343, ../sass/styles.scss */
 #modal-container .screenshot-modal .images {
   display: flex;
   flex-direction: row;
-  flex: 4;
+  flex: 6;
 }
-/* line 340, ../sass/styles.scss */
+/* line 348, ../sass/styles.scss */
 #modal-container .screenshot-modal .images .image-1 {
   display: flex;
   flex: 7;
@@ -325,72 +334,94 @@ a:hover, a:active {
   box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5);
   overflow: hidden;
 }
-/* line 347, ../sass/styles.scss */
+/* line 355, ../sass/styles.scss */
 #modal-container .screenshot-modal .images .image-1 video {
   width: 100%;
   object-fit: cover;
 }
-/* line 353, ../sass/styles.scss */
+/* line 361, ../sass/styles.scss */
 #modal-container .screenshot-modal .images .image-col {
   display: flex;
   flex-direction: column;
   flex: 4;
 }
-/* line 358, ../sass/styles.scss */
+/* line 366, ../sass/styles.scss */
 #modal-container .screenshot-modal .images .image-col .image-2 {
   flex: 1;
   margin: 5px;
   box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5);
 }
-/* line 364, ../sass/styles.scss */
+/* line 372, ../sass/styles.scss */
 #modal-container .screenshot-modal .images .image-col .image-3 {
   flex: 1;
   margin: 5px;
   box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5);
 }
 /* line 380, ../sass/styles.scss */
+#modal-container .screenshot-modal .images .image:hover {
+  cursor: pointer;
+}
+/* line 384, ../sass/styles.scss */
+#modal-container .screenshot-modal .images .image:active {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0px;
+}
+/* line 399, ../sass/styles.scss */
+#modal-container .screenshot-modal.rocket-modal .images .image-1 {
+  background: url("../images/rocket_0.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top left;
+}
+/* line 407, ../sass/styles.scss */
 #modal-container .screenshot-modal.rocket-modal .images .image-col .image-2 {
-  background: url("../images/rocketstats.png");
+  background: url("../images/rocket_1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top left;
 }
-/* line 387, ../sass/styles.scss */
+/* line 414, ../sass/styles.scss */
 #modal-container .screenshot-modal.rocket-modal .images .image-col .image-3 {
-  background: url("../images/rocketstats.png");
+  background: url("../images/rocket_2.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top left;
 }
-/* line 405, ../sass/styles.scss */
+/* line 432, ../sass/styles.scss */
 #modal-container .screenshot-modal.eyecue-modal .images .image-col .image-2 {
-  background: url("../images/eyecuelab.png");
+  background: url("../images/eyecue_1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top left;
 }
-/* line 412, ../sass/styles.scss */
+/* line 439, ../sass/styles.scss */
 #modal-container .screenshot-modal.eyecue-modal .images .image-col .image-3 {
-  background: url("../images/eyecuelab.png");
+  background: url("../images/eyecue_2.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top left;
 }
-/* line 430, ../sass/styles.scss */
+/* line 457, ../sass/styles.scss */
 #modal-container .screenshot-modal.powur-modal .images .image-col .image-2 {
-  background: url("../images/dashboard.png");
+  background: url("../images/powur_1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top left;
 }
-/* line 437, ../sass/styles.scss */
+/* line 464, ../sass/styles.scss */
 #modal-container .screenshot-modal.powur-modal .images .image-col .image-3 {
-  background: url("../images/dashboard.png");
+  background: url("../images/powur_2.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top left;
 }
-/* line 447, ../sass/styles.scss */
+/* line 474, ../sass/styles.scss */
 #modal-container .screenshot-modal .modal-content {
   flex: 3;
   display: flex;
@@ -398,7 +429,7 @@ a:hover, a:active {
   justify-content: space-around;
   padding: 5px;
 }
-/* line 454, ../sass/styles.scss */
+/* line 481, ../sass/styles.scss */
 #modal-container .screenshot-modal .modal-content .chip-container {
   display: flex;
   flex-direction: row;
@@ -409,7 +440,7 @@ a:hover, a:active {
   margin: 0 auto;
   flex: 2;
 }
-/* line 464, ../sass/styles.scss */
+/* line 491, ../sass/styles.scss */
 #modal-container .screenshot-modal .modal-content .chip-container .chip {
   background: #827e8d;
   color: #f4f3ec;
@@ -417,29 +448,29 @@ a:hover, a:active {
   padding: 2px 10px;
   box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.5);
 }
-/* line 473, ../sass/styles.scss */
+/* line 500, ../sass/styles.scss */
 #modal-container .screenshot-modal .modal-content .description {
   color: #666;
   flex: 3;
 }
 
-/* line 481, ../sass/styles.scss */
+/* line 508, ../sass/styles.scss */
 .panel-2 {
   background-color: #26262d;
   color: #f4f3ec;
 }
-/* line 485, ../sass/styles.scss */
+/* line 512, ../sass/styles.scss */
 .panel-2 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 400px;
 }
-/* line 491, ../sass/styles.scss */
+/* line 518, ../sass/styles.scss */
 .panel-2 .content .title {
   margin-bottom: 25px;
 }
-/* line 495, ../sass/styles.scss */
+/* line 522, ../sass/styles.scss */
 .panel-2 .content .screenshot-container {
   flex-wrap: wrap;
   display: flex;
@@ -448,7 +479,7 @@ a:hover, a:active {
   min-height: 400px;
   flex-wrap: wrap;
 }
-/* line 503, ../sass/styles.scss */
+/* line 530, ../sass/styles.scss */
 .panel-2 .content .screenshot-container .screenshot-item {
   display: flex;
   flex-direction: column;
@@ -458,41 +489,46 @@ a:hover, a:active {
   max-width: 400px;
   margin: 0px 10px 30px;
 }
-/* line 512, ../sass/styles.scss */
+/* line 539, ../sass/styles.scss */
 .panel-2 .content .screenshot-container .screenshot-item .screenshot {
   background: black;
   height: 260px;
   width: 400px;
   box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.5);
   margin-bottom: 10px;
+  cursor: pointer;
 }
-/* line 519, ../sass/styles.scss */
+/* line 547, ../sass/styles.scss */
+.panel-2 .content .screenshot-container .screenshot-item .screenshot:hover {
+  opacity: .9;
+}
+/* line 551, ../sass/styles.scss */
 .panel-2 .content .screenshot-container .screenshot-item .screenshot.rocket {
   background: url("../images/rocketstats.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* line 525, ../sass/styles.scss */
+/* line 557, ../sass/styles.scss */
 .panel-2 .content .screenshot-container .screenshot-item .screenshot.eyecue {
   background: url("../images/eyecuelab.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* line 531, ../sass/styles.scss */
+/* line 563, ../sass/styles.scss */
 .panel-2 .content .screenshot-container .screenshot-item .screenshot.dashboard {
-  background: url("../images/dashboard.png");
+  background: url("../images/powur_1.png");
   background-repeat: no-repeat;
   background-size: cover;
   filter: brightness(93%);
 }
 
-/* line 543, ../sass/styles.scss */
+/* line 575, ../sass/styles.scss */
 .panel-3 {
   background-color: #f4f3ec;
   color: #666;
   transform: skewY(4deg);
 }
-/* line 548, ../sass/styles.scss */
+/* line 580, ../sass/styles.scss */
 .panel-3 .content {
   height: 275px;
   transform: skewY(-4deg);
@@ -500,7 +536,7 @@ a:hover, a:active {
   flex-direction: row;
   align-items: center;
 }
-/* line 555, ../sass/styles.scss */
+/* line 587, ../sass/styles.scss */
 .panel-3 .content .avatar {
   background: url("../images/raccoon.jpg");
   background-repeat: no-repeat;
@@ -512,42 +548,42 @@ a:hover, a:active {
   border-radius: 50%;
   box-shadow: 0px 3px 20px -3px rgba(0, 0, 0, 0.5);
 }
-/* line 567, ../sass/styles.scss */
+/* line 599, ../sass/styles.scss */
 .panel-3 .content .bio {
   margin-left: 70px;
   max-width: 550px;
   display: flex;
   flex-direction: column;
 }
-/* line 573, ../sass/styles.scss */
+/* line 605, ../sass/styles.scss */
 .panel-3 .content .bio .title {
   color: inherit;
   margin-bottom: 25px;
 }
-/* line 578, ../sass/styles.scss */
+/* line 610, ../sass/styles.scss */
 .panel-3 .content .bio .links {
   margin-top: 25px;
   display: flex;
   flex-direction: column;
 }
-/* line 583, ../sass/styles.scss */
+/* line 615, ../sass/styles.scss */
 .panel-3 .content .bio .links .link-row {
   display: flex;
   flex-direction: row;
 }
-/* line 587, ../sass/styles.scss */
+/* line 619, ../sass/styles.scss */
 .panel-3 .content .bio .links .link-row .first {
   flex: 4;
 }
-/* line 591, ../sass/styles.scss */
+/* line 623, ../sass/styles.scss */
 .panel-3 .content .bio .links .link-row .second {
   flex: 1;
 }
-/* line 595, ../sass/styles.scss */
+/* line 627, ../sass/styles.scss */
 .panel-3 .content .bio .links .link-row i {
   margin: 0px 5px 0px 10px;
 }
-/* line 603, ../sass/styles.scss */
+/* line 635, ../sass/styles.scss */
 .panel-3 a {
   align-items: center;
   display: flex;

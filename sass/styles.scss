@@ -260,7 +260,6 @@ a {
   }
 }
 
-
 #modal-container {
   position: fixed;
   top: 0px;
@@ -328,14 +327,23 @@ a {
     max-width: 750px;
     background: #f4f3ec;
     z-index: 5;
-    padding: 20px;
+    padding: 25px;
     display: none;
     flex-direction: column;
+
+    .close {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      color: #666;
+      cursor: pointer;
+      font-weight: 700;
+    }
 
     .images {
       display: flex;
       flex-direction: row;
-      flex: 4;
+      flex: 6;
 
       .image-1 {
         display: flex;
@@ -367,25 +375,44 @@ a {
           box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5);
         }
       }
+
+      .image {
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:active {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: 0px;
+        }
+      }
     }
 
     &.rocket-modal {
       .images {
         .image-1 {
-          video {
-          }
+          background: url('../images/rocket_0.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: top left;
         }
 
         .image-col {        
           .image-2 {
-            background: url('../images/rocketstats.png');
+            background: url('../images/rocket_1.png');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: top left;
           }
 
           .image-3 {
-            background: url('../images/rocketstats.png');
+            background: url('../images/rocket_2.png');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: top left;
@@ -403,14 +430,14 @@ a {
 
         .image-col {        
           .image-2 {
-            background: url('../images/eyecuelab.png');
+            background: url('../images/eyecue_1.png');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: top left;
           }
 
           .image-3 {
-            background: url('../images/eyecuelab.png');
+            background: url('../images/eyecue_2.png');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: top left;
@@ -428,14 +455,14 @@ a {
 
         .image-col {        
           .image-2 {
-            background: url('../images/dashboard.png');
+            background: url('../images/powur_1.png');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: top left;
           }
 
           .image-3 {
-            background: url('../images/dashboard.png');
+            background: url('../images/powur_2.png');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: top left;
@@ -515,6 +542,11 @@ a {
           width: 400px;
           box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.5);
           margin-bottom: 10px;
+          cursor: pointer;
+
+          &:hover {
+            opacity: .9;
+          }
 
           &.rocket {
             background: url('../images/rocketstats.png');
@@ -529,7 +561,7 @@ a {
           }
 
           &.dashboard {
-            background: url('../images/dashboard.png');
+            background: url('../images/powur_1.png');
             background-repeat: no-repeat;
             background-size: cover;
             filter: brightness(93%);
