@@ -1,5 +1,4 @@
 function openModal(type) {
-  console.log(type)
   var el = document.getElementById('modal-container');
   el.classList.add(type);
 }
