@@ -183,18 +183,23 @@ a:hover, a:active {
   background-color: #f4f3ec;
   color: #666;
 }
-/* line 200, ../sass/styles.scss */
+/* line 202, ../sass/styles.scss */
+.panel-1.animate .port-item {
+  background: salmon;
+  animation: dropin 350ms ease-in forwards;
+}
+/* line 208, ../sass/styles.scss */
 .panel-1 .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-/* line 206, ../sass/styles.scss */
+/* line 214, ../sass/styles.scss */
 .panel-1 .content .title {
   color: #26262d;
 }
-/* line 210, ../sass/styles.scss */
+/* line 218, ../sass/styles.scss */
 .panel-1 .content .port-row {
   display: flex;
   flex-direction: row;
@@ -203,13 +208,13 @@ a:hover, a:active {
   margin-top: 25px;
 }
 @media (max-width: 667px) {
-  /* line 210, ../sass/styles.scss */
+  /* line 218, ../sass/styles.scss */
   .panel-1 .content .port-row {
     width: 100%;
     margin-top: 0px;
   }
 }
-/* line 222, ../sass/styles.scss */
+/* line 230, ../sass/styles.scss */
 .panel-1 .content .port-row .port-item {
   display: flex;
   flex-direction: column;
@@ -219,70 +224,112 @@ a:hover, a:active {
   flex: 1;
   margin: 10px;
 }
-/* line 232, ../sass/styles.scss */
+/* line 240, ../sass/styles.scss */
+.panel-1 .content .port-row .port-item:nth-child(1) {
+  animation-delay: 100ms;
+}
+/* line 240, ../sass/styles.scss */
+.panel-1 .content .port-row .port-item:nth-child(2) {
+  animation-delay: 200ms;
+}
+/* line 240, ../sass/styles.scss */
+.panel-1 .content .port-row .port-item:nth-child(3) {
+  animation-delay: 300ms;
+}
+/* line 240, ../sass/styles.scss */
+.panel-1 .content .port-row .port-item:nth-child(4) {
+  animation-delay: 400ms;
+}
+/* line 240, ../sass/styles.scss */
+.panel-1 .content .port-row .port-item:nth-child(5) {
+  animation-delay: 500ms;
+}
+/* line 240, ../sass/styles.scss */
+.panel-1 .content .port-row .port-item:nth-child(6) {
+  animation-delay: 600ms;
+}
+/* line 240, ../sass/styles.scss */
+.panel-1 .content .port-row .port-item:nth-child(7) {
+  animation-delay: 700ms;
+}
+/* line 240, ../sass/styles.scss */
+.panel-1 .content .port-row .port-item:nth-child(8) {
+  animation-delay: 800ms;
+}
+@keyframes dropin {
+  0% {
+    margin-top: -50px;
+    opacity: .5;
+  }
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+/* line 257, ../sass/styles.scss */
 .panel-1 .content .port-row .port {
   width: 100%;
   height: 150px;
   filter: grayscale(50%);
   margin: 10px 0px;
 }
-/* line 238, ../sass/styles.scss */
+/* line 263, ../sass/styles.scss */
 .panel-1 .content .port-row .port.port-css {
   background: url("../images/port-css.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
-/* line 245, ../sass/styles.scss */
+/* line 270, ../sass/styles.scss */
 .panel-1 .content .port-row .port.port-git {
   background: url("../images/port-git.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
-/* line 252, ../sass/styles.scss */
+/* line 277, ../sass/styles.scss */
 .panel-1 .content .port-row .port.port-html {
   background: url("../images/port-html.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
-/* line 259, ../sass/styles.scss */
+/* line 284, ../sass/styles.scss */
 .panel-1 .content .port-row .port.port-js {
   background: url("../images/port-js.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
-/* line 266, ../sass/styles.scss */
+/* line 291, ../sass/styles.scss */
 .panel-1 .content .port-row .port.port-ng {
   background: url("../images/port-ng.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
-/* line 273, ../sass/styles.scss */
+/* line 298, ../sass/styles.scss */
 .panel-1 .content .port-row .port.port-node {
   background: url("../images/port-node.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
-/* line 280, ../sass/styles.scss */
+/* line 305, ../sass/styles.scss */
 .panel-1 .content .port-row .port.port-react {
   background: url("../images/port-react.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
-/* line 287, ../sass/styles.scss */
+/* line 312, ../sass/styles.scss */
 .panel-1 .content .port-row .port.port-ruby {
   background: url("../images/port-ruby.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
-/* line 294, ../sass/styles.scss */
+/* line 319, ../sass/styles.scss */
 .panel-1 .content .port-row .port.port-ts {
   background: url("../images/port-ts.png");
   background-repeat: no-repeat;
@@ -290,7 +337,7 @@ a:hover, a:active {
   background-position: center;
 }
 
-/* line 305, ../sass/styles.scss */
+/* line 330, ../sass/styles.scss */
 #modal-container {
   position: fixed;
   top: 0px;
@@ -303,43 +350,43 @@ a:hover, a:active {
   justify-content: center;
   z-index: 3;
 }
-/* line 317, ../sass/styles.scss */
+/* line 342, ../sass/styles.scss */
 #modal-container.rocket {
   display: flex;
 }
-/* line 320, ../sass/styles.scss */
+/* line 345, ../sass/styles.scss */
 #modal-container.rocket .overlay {
   display: unset;
 }
-/* line 324, ../sass/styles.scss */
+/* line 349, ../sass/styles.scss */
 #modal-container.rocket .rocket-modal {
   display: flex;
 }
-/* line 329, ../sass/styles.scss */
+/* line 354, ../sass/styles.scss */
 #modal-container.eyecue {
   display: flex;
 }
-/* line 332, ../sass/styles.scss */
+/* line 357, ../sass/styles.scss */
 #modal-container.eyecue .overlay {
   display: unset;
 }
-/* line 336, ../sass/styles.scss */
+/* line 361, ../sass/styles.scss */
 #modal-container.eyecue .eyecue-modal {
   display: flex;
 }
-/* line 341, ../sass/styles.scss */
+/* line 366, ../sass/styles.scss */
 #modal-container.powur {
   display: flex;
 }
-/* line 344, ../sass/styles.scss */
+/* line 369, ../sass/styles.scss */
 #modal-container.powur .overlay {
   display: unset;
 }
-/* line 348, ../sass/styles.scss */
+/* line 373, ../sass/styles.scss */
 #modal-container.powur .powur-modal {
   display: flex;
 }
-/* line 353, ../sass/styles.scss */
+/* line 378, ../sass/styles.scss */
 #modal-container .overlay {
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -350,7 +397,7 @@ a:hover, a:active {
   cursor: pointer;
   display: none;
 }
-/* line 364, ../sass/styles.scss */
+/* line 389, ../sass/styles.scss */
 #modal-container .screenshot-modal {
   position: relative;
   width: 90%;
@@ -363,14 +410,14 @@ a:hover, a:active {
   display: none;
   flex-direction: column;
 }
-@media (max-width: 667px) {
-  /* line 364, ../sass/styles.scss */
+@media (max-width: 992px) {
+  /* line 389, ../sass/styles.scss */
   #modal-container .screenshot-modal {
     height: unset;
     max-height: unset;
   }
 }
-/* line 381, ../sass/styles.scss */
+/* line 406, ../sass/styles.scss */
 #modal-container .screenshot-modal .close {
   position: absolute;
   top: 5px;
@@ -379,20 +426,20 @@ a:hover, a:active {
   cursor: pointer;
   font-weight: 700;
 }
-/* line 390, ../sass/styles.scss */
+/* line 415, ../sass/styles.scss */
 #modal-container .screenshot-modal .images {
   display: flex;
   flex-direction: row;
   flex: 6;
   max-height: 325px;
 }
-@media (max-width: 667px) {
-  /* line 390, ../sass/styles.scss */
+@media (max-width: 992px) {
+  /* line 415, ../sass/styles.scss */
   #modal-container .screenshot-modal .images {
     display: none;
   }
 }
-/* line 400, ../sass/styles.scss */
+/* line 425, ../sass/styles.scss */
 #modal-container .screenshot-modal .images .image-1 {
   display: flex;
   flex: 7;
@@ -400,35 +447,35 @@ a:hover, a:active {
   box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5);
   overflow: hidden;
 }
-/* line 407, ../sass/styles.scss */
+/* line 432, ../sass/styles.scss */
 #modal-container .screenshot-modal .images .image-1 video {
   width: 100%;
   object-fit: cover;
 }
-/* line 413, ../sass/styles.scss */
+/* line 438, ../sass/styles.scss */
 #modal-container .screenshot-modal .images .image-col {
   display: flex;
   flex-direction: column;
   flex: 4;
 }
-/* line 418, ../sass/styles.scss */
+/* line 443, ../sass/styles.scss */
 #modal-container .screenshot-modal .images .image-col .image-2 {
   flex: 1;
   margin: 5px;
   box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5);
 }
-/* line 424, ../sass/styles.scss */
+/* line 449, ../sass/styles.scss */
 #modal-container .screenshot-modal .images .image-col .image-3 {
   flex: 1;
   margin: 5px;
   box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5);
 }
-/* line 432, ../sass/styles.scss */
+/* line 457, ../sass/styles.scss */
 #modal-container .screenshot-modal .images .image:hover {
   cursor: zoom-in;
   opacity: .9;
 }
-/* line 437, ../sass/styles.scss */
+/* line 462, ../sass/styles.scss */
 #modal-container .screenshot-modal .images .image:active {
   opacity: 1;
   position: absolute;
@@ -439,56 +486,56 @@ a:hover, a:active {
   margin: 0px;
   cursor: zoom-out;
 }
-/* line 452, ../sass/styles.scss */
+/* line 477, ../sass/styles.scss */
 #modal-container .screenshot-modal.rocket-modal .images .image-1 {
   background: url("../images/rocket_0.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-/* line 460, ../sass/styles.scss */
+/* line 485, ../sass/styles.scss */
 #modal-container .screenshot-modal.rocket-modal .images .image-col .image-2 {
   background: url("../images/rocket_1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-/* line 467, ../sass/styles.scss */
+/* line 492, ../sass/styles.scss */
 #modal-container .screenshot-modal.rocket-modal .images .image-col .image-3 {
   background: url("../images/rocket_2.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-/* line 485, ../sass/styles.scss */
+/* line 510, ../sass/styles.scss */
 #modal-container .screenshot-modal.eyecue-modal .images .image-col .image-2 {
   background: url("../images/eyecue_1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-/* line 492, ../sass/styles.scss */
+/* line 517, ../sass/styles.scss */
 #modal-container .screenshot-modal.eyecue-modal .images .image-col .image-3 {
   background: url("../images/eyecue_2.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-/* line 510, ../sass/styles.scss */
+/* line 535, ../sass/styles.scss */
 #modal-container .screenshot-modal.powur-modal .images .image-col .image-2 {
   background: url("../images/powur_1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-/* line 517, ../sass/styles.scss */
+/* line 542, ../sass/styles.scss */
 #modal-container .screenshot-modal.powur-modal .images .image-col .image-3 {
   background: url("../images/powur_2.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-/* line 527, ../sass/styles.scss */
+/* line 552, ../sass/styles.scss */
 #modal-container .screenshot-modal .modal-content {
   flex: 3;
   display: flex;
@@ -496,7 +543,7 @@ a:hover, a:active {
   justify-content: space-around;
   padding: 5px;
 }
-/* line 534, ../sass/styles.scss */
+/* line 559, ../sass/styles.scss */
 #modal-container .screenshot-modal .modal-content .chip-container {
   display: flex;
   flex-direction: row;
@@ -509,12 +556,12 @@ a:hover, a:active {
   height: 80px;
 }
 @media (max-width: 667px) {
-  /* line 534, ../sass/styles.scss */
+  /* line 559, ../sass/styles.scss */
   #modal-container .screenshot-modal .modal-content .chip-container {
     width: unset;
   }
 }
-/* line 549, ../sass/styles.scss */
+/* line 574, ../sass/styles.scss */
 #modal-container .screenshot-modal .modal-content .chip-container .chip {
   background: #343436;
   color: #f4f3ec;
@@ -522,43 +569,43 @@ a:hover, a:active {
   padding: 2px 10px;
   box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.5);
 }
-/* line 558, ../sass/styles.scss */
+/* line 583, ../sass/styles.scss */
 #modal-container .screenshot-modal .modal-content .description {
   margin-top: 15px;
   color: #666;
   flex: 3;
 }
-/* line 563, ../sass/styles.scss */
+/* line 588, ../sass/styles.scss */
 #modal-container .screenshot-modal .modal-content .description .links {
   text-align: center;
   margin-top: 15px;
 }
-/* line 568, ../sass/styles.scss */
+/* line 593, ../sass/styles.scss */
 #modal-container .screenshot-modal .modal-content .description i {
   margin: 0px 5px 0px 10px;
 }
-/* line 571, ../sass/styles.scss */
+/* line 596, ../sass/styles.scss */
 #modal-container .screenshot-modal .modal-content .description i.first {
   margin-left: 0px;
 }
 
-/* line 580, ../sass/styles.scss */
+/* line 605, ../sass/styles.scss */
 .panel-2 {
   background-color: #26262d;
   color: #f4f3ec;
 }
-/* line 584, ../sass/styles.scss */
+/* line 609, ../sass/styles.scss */
 .panel-2 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 400px;
 }
-/* line 590, ../sass/styles.scss */
+/* line 615, ../sass/styles.scss */
 .panel-2 .content .title {
   margin-bottom: 35px;
 }
-/* line 594, ../sass/styles.scss */
+/* line 619, ../sass/styles.scss */
 .panel-2 .content .screenshot-container {
   flex-wrap: wrap;
   display: flex;
@@ -567,7 +614,7 @@ a:hover, a:active {
   min-height: 400px;
   flex-wrap: wrap;
 }
-/* line 602, ../sass/styles.scss */
+/* line 627, ../sass/styles.scss */
 .panel-2 .content .screenshot-container .screenshot-item {
   display: flex;
   flex-direction: column;
@@ -577,7 +624,7 @@ a:hover, a:active {
   max-width: 400px;
   margin: 0px 10px 30px;
 }
-/* line 611, ../sass/styles.scss */
+/* line 636, ../sass/styles.scss */
 .panel-2 .content .screenshot-container .screenshot-item .screenshot {
   background: black;
   height: 260px;
@@ -586,23 +633,23 @@ a:hover, a:active {
   margin-bottom: 10px;
   cursor: pointer;
 }
-/* line 619, ../sass/styles.scss */
+/* line 644, ../sass/styles.scss */
 .panel-2 .content .screenshot-container .screenshot-item .screenshot:hover {
   opacity: .9;
 }
-/* line 623, ../sass/styles.scss */
+/* line 648, ../sass/styles.scss */
 .panel-2 .content .screenshot-container .screenshot-item .screenshot.rocket {
   background: url("../images/rocketstats.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* line 629, ../sass/styles.scss */
+/* line 654, ../sass/styles.scss */
 .panel-2 .content .screenshot-container .screenshot-item .screenshot.eyecue {
   background: url("../images/eyecuelab.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* line 635, ../sass/styles.scss */
+/* line 660, ../sass/styles.scss */
 .panel-2 .content .screenshot-container .screenshot-item .screenshot.dashboard {
   background: url("../images/powur_1.png");
   background-repeat: no-repeat;
@@ -610,13 +657,13 @@ a:hover, a:active {
   filter: brightness(93%);
 }
 
-/* line 647, ../sass/styles.scss */
+/* line 672, ../sass/styles.scss */
 .panel-3 {
   background-color: #f4f3ec;
   color: #666;
   transform: skewY(4deg);
 }
-/* line 652, ../sass/styles.scss */
+/* line 677, ../sass/styles.scss */
 .panel-3 .content {
   height: 275px;
   transform: skewY(-4deg);
@@ -624,7 +671,7 @@ a:hover, a:active {
   flex-direction: row;
   align-items: center;
 }
-/* line 659, ../sass/styles.scss */
+/* line 684, ../sass/styles.scss */
 .panel-3 .content .avatar {
   background: url("../images/raccoon.jpg");
   background-repeat: no-repeat;
@@ -636,68 +683,68 @@ a:hover, a:active {
   border-radius: 50%;
   box-shadow: 0px 3px 20px -3px rgba(0, 0, 0, 0.5);
 }
-/* line 671, ../sass/styles.scss */
+/* line 696, ../sass/styles.scss */
 .panel-3 .content .bio {
   margin-left: 70px;
   max-width: 550px;
   display: flex;
   flex-direction: column;
 }
-/* line 677, ../sass/styles.scss */
+/* line 702, ../sass/styles.scss */
 .panel-3 .content .bio .title {
   color: inherit;
   margin-bottom: 25px;
 }
-/* line 682, ../sass/styles.scss */
+/* line 707, ../sass/styles.scss */
 .panel-3 .content .bio .links {
   margin-top: 25px;
   display: flex;
   flex-direction: column;
 }
-/* line 687, ../sass/styles.scss */
+/* line 712, ../sass/styles.scss */
 .panel-3 .content .bio .links .link-row {
   display: flex;
   flex-direction: row;
 }
-/* line 691, ../sass/styles.scss */
+/* line 716, ../sass/styles.scss */
 .panel-3 .content .bio .links .link-row .first {
   flex: 4;
 }
-/* line 695, ../sass/styles.scss */
+/* line 720, ../sass/styles.scss */
 .panel-3 .content .bio .links .link-row .second {
   flex: 1;
 }
-/* line 699, ../sass/styles.scss */
+/* line 724, ../sass/styles.scss */
 .panel-3 .content .bio .links .link-row i {
   margin: 0px 5px 0px 10px;
 }
 @media (max-width: 667px) {
-  /* line 652, ../sass/styles.scss */
+  /* line 677, ../sass/styles.scss */
   .panel-3 .content {
     height: 100%;
     flex-direction: column-reverse;
   }
-  /* line 710, ../sass/styles.scss */
+  /* line 735, ../sass/styles.scss */
   .panel-3 .content .avatar {
     min-width: 150px;
     width: 150px;
     min-height: 150px;
     height: 150px;
   }
-  /* line 717, ../sass/styles.scss */
+  /* line 742, ../sass/styles.scss */
   .panel-3 .content .bio {
     margin: 15px;
   }
-  /* line 721, ../sass/styles.scss */
+  /* line 746, ../sass/styles.scss */
   .panel-3 .content .bio .links .link-row {
     flex-direction: column;
   }
-  /* line 724, ../sass/styles.scss */
+  /* line 749, ../sass/styles.scss */
   .panel-3 .content .bio .links .link-row i {
     margin-left: 0px;
   }
 }
-/* line 733, ../sass/styles.scss */
+/* line 758, ../sass/styles.scss */
 .panel-3 a {
   align-items: center;
   display: flex;
