@@ -203,17 +203,37 @@ a {
     justify-content: center;
     align-items: center;
 
+    .title {
+      color: #26262d;
+    }
+
     .port-row {
       display: flex;
       flex-direction: row;
       width: 75%;
       justify-content: space-around;
+      margin-top: 25px;
+
+      @include mobile {
+        width: 100%;
+        margin-top: 0px;
+      }
+
+      .port-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex: 1;
+        margin: 10px;
+      }
 
       .port {
-        width: 150px;
-        height: 200px;
+        width: 100%;
+        height: 150px;
         filter: grayscale(50%);
-        margin: 10px 15px;
+        margin: 10px 0px;
 
         &.port-css {
           background: url('../images/port-css.png');
@@ -568,7 +588,7 @@ a {
     min-height: 400px;
 
     .title {
-      margin-bottom: 30px;
+      margin-bottom: 35px;
     }
 
     .screenshot-container {
