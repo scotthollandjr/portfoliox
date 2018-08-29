@@ -238,7 +238,7 @@ a {
 
         @for $i from 1 through 8 {
           &:nth-child(#{$i}) {
-            animation-delay: #{100 * $i}ms;
+            animation-delay: #{250 * $i}ms;
           }
         }
       }
